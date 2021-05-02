@@ -9,11 +9,3 @@ theme:
 
 nav:
     - Home: index.md
-
-markdown_extensions:
-  - admonition
-  - codehilite    
-  - pymdownx.tabbed
-  - pymdownx.superfences
-  - pymdownx.smartsymbols
-  - pymdownx.arithmatex
