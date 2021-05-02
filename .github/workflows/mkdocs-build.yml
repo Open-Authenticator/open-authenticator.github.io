@@ -1,20 +1,26 @@
-name: Publish docs via GitHub Pages
+name: Build Documentation using MkDocs
+
 on:
   push:
-    branches:
-      - master
+    branches: [master]
+  pull_request:
+    branches: [master]
 
 jobs:
   build:
-    name: Deploy docs
+    name: Build and Deploy Documentation
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout main
+      - name: Checkout Master
         uses: actions/checkout@v2
 
-      - name: Deploy docs
-        uses: mhausenblas/mkdocs-deploy-gh-pages@nomaterial
-        env:
-          GITHUB_TOKEN: ${{ secrets.ACTIONS_KEY_ORG_ADMIN  }}
-          CONFIG_FILE: ./mkdocs.yml
-          EXTRA_PACKAGES: build-base
+      - name: Set up Python 3.7
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+
+      - name: Deploy
+        run: |
+          git pull
+          mkdocs gh-deploy
+

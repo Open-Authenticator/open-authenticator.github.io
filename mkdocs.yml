@@ -5,7 +5,7 @@ site_url: https://open-authenticator.github.io
 repo_url: https://github.com/Open-Authenticator
 
 theme:
-    name: readthedocs
+    name: 'readthedocs'
 
 nav:
     - Home: index.md
