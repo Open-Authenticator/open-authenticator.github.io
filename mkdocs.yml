@@ -1,0 +1,19 @@
+site_name: open-authenticator
+site_author: Vedant Paranjape
+site_description: "Documentation for Open Authenticator"
+site_url: https://open-authenticator.github.io
+repo_url: https://github.com/Open-Authenticator
+
+theme:
+    name: readthedocs
+
+nav:
+    - Home: index.md
+
+markdown_extensions:
+  - admonition
+  - codehilite    
+  - pymdownx.tabbed
+  - pymdownx.superfences
+  - pymdownx.smartsymbols
+  - pymdownx.arithmatex
