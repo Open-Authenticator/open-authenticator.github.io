@@ -8,4 +8,4 @@ theme:
     name: 'readthedocs'
 
 nav:
-    - Home: index.md
+    - Overview: index.md
