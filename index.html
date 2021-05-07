@@ -18,7 +18,7 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Home";
+    var mkdocs_page_name = "Overview";
     var mkdocs_page_input_path = "index.md";
     var mkdocs_page_url = "/";
   </script>
@@ -48,8 +48,28 @@
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
                 <ul class="current">
-                    <li class="toctree-l1 current"><a class="reference internal current" href=".">Home</a>
+                    <li class="toctree-l1 current"><a class="reference internal current" href=".">Overview</a>
     <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#media-coverage">Media Coverage</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#gallery">Gallery</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#project-logs">Project logs</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#join-the-discussion">Join the Discussion:</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#repositories">Repositories</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#ordering">Ordering</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#pcb">PCB</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#components">Components</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#sponsors">Sponsors</a>
+    </li>
     </ul>
                     </li>
                 </ul>
@@ -74,7 +94,7 @@
     
       
     
-    <li>Home</li>
+    <li>Overview</li>
     <li class="wy-breadcrumbs-aside">
       
         <a href="https://github.com/Open-Authenticator/edit/master/docs/index.md"
@@ -89,7 +109,76 @@
             <div class="section">
               
                 <h1 id="overview">Overview</h1>
-<p>The Open Authenticator is an open source TOTP based hardware authenticator using ESP32. In layman's terms, this does what Google Authenticator or Authy does.</p>
+<p><br /></p>
+<p align="center">
+    <a href="https://github.com/Open-Authenticator">
+        <img src="./assets/open-autheticator-logo.png" alt="Logo" width="200" height="200">
+    </a>
+</p>
+
+<p align="center">
+<img alt="GitHub watchers" src="https://img.shields.io/github/watchers/open-authenticator/open-authenticator-app?style=plastic">
+<img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/open-authenticator/open-authenticator-app?style=plastic">
+<img alt="GitHub forks" src="https://img.shields.io/github/forks/open-authenticator/open-authenticator-app?style=plastic">
+<img alt="GitHub issues"
+src="https://img.shields.io/github/issues/open-authenticator/open-authenticator-app?style=plastic">
+<img alt="GitHub forks" src="https://img.shields.io/github/forks/open-authenticator/open-authenticator-app?style=plastic">
+<img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/open-authenticator/open-authenticator-app?style=plastic">
+<img alt="GitHub license" src="https://img.shields.io/github/license/open-authenticator/open-authenticator-app?style=plastic">
+</p>
+
+<p>The Open Authenticator is an open source TOTP based hardware authenticator using
+ESP32. In layman's terms, this does what Google Authenticator or Authy does.
+This uses a custom built pcb and a 3d case, also it uses a firmware built for
+this purpose using esp-idf, uses lvgl as the GUI library.</p>
+<p>The features of open authenticator's <a href="https://github.com/Open-Authenticator/hardware-design">printer circuit board</a> are:   </p>
+<ul>
+<li>Small form factor of 82mm x 42mm</li>
+<li>Uses ESP32-WROOM-32D module</li>
+<li>Uses 128x64 0.96" inch OLED panel</li>
+<li>Uses DS3231 RTC with battery backup (CR2032) for timekeeping</li>
+<li>Powered by 3.7V 300 mAh LiPo battery</li>
+<li>Uses MCP73831 for charging LiPo battery</li>
+<li>Uses TPS63001 Buck Boost Converter IC for efficient 3.3V power supply, with input range from 1.8V - 5.5V</li>
+<li>Uses TPS22919 Load switch to control power to OLED and RTC chip</li>
+<li>Autoselect power source, i.e., battery or USB</li>
+<li>USB Type-C for charging only (no data pins connected)</li>
+</ul>
+<h2 id="media-coverage">Media Coverage</h2>
+<ul>
+<li>Hackster.io: <a href="https://www.hackster.io/news/totp-based-open-hardware-authenticator-powered-by-an-esp32-microcontroller-c770f10008af">TOTP-Based Open Hardware Authenticator Powered by an ESP32 Microcontroller</a></li>
+</ul>
+<h2 id="gallery">Gallery</h2>
+<h2 id="project-logs">Project logs</h2>
+<ul>
+<li>Hackaday: <a href="https://hackaday.io/project/176959-open-authenticator">https://hackaday.io/project/176959-open-authenticator</a></li>
+</ul>
+<h2 id="join-the-discussion">Join the Discussion:</h2>
+<ul>
+<li>Discord: <a href="https://discord.gg/kVDdB9kAEP">https://discord.gg/kVDdB9kAEP</a></li>
+</ul>
+<h2 id="repositories">Repositories</h2>
+<ul>
+<li>PCB Design: <a href="https://github.com/Open-Authenticator/hardware-design">https://github.com/Open-Authenticator/hardware-design</a></li>
+<li>Firmware: <a href="https://github.com/Open-Authenticator/open-authenticator-app">https://github.com/Open-Authenticator/open-authenticator-app</a></li>
+<li>3D-Case: <a href="https://github.com/Open-Authenticator/3d-case">https://github.com/Open-Authenticator/3d-case</a></li>
+</ul>
+<h2 id="ordering">Ordering</h2>
+<h3 id="pcb">PCB</h3>
+<p><a href="https://oshpark.com/shared_projects/kZuvm8FV"><img src="https://oshpark.com/packs/media/images/badge-5f4e3bf4bf68f72ff88bd92e0089e9cf.png" alt="Order from OSH Park"></img></a></p>
+<h3 id="components">Components</h3>
+<ul>
+<li><a href="https://docs.google.com/spreadsheets/d/1dUZdB7LErKdkV40vjPda2T-85nJA-UcwpFP-PLhwYTE/edit?usp=sharing">Bill of Material</a></li>
+</ul>
+<h2 id="sponsors">Sponsors</h2>
+<ul>
+<li><a href="https://oshpark.com/">OSHPark</a> - Thanks to OSHPark for sponsoring first prototype</li>
+<li><a href="https://www.pcbway.com/">PCBWay</a> - Thanks to PCBway for sponsoring the final prototype</li>
+<li><a href="https://www.asahitec.in/index.html">Asahitec</a> - Thanks for discounts on stencil</li>
+</ul>
+<p><img src="./assets/pcbway_logo.png" width=160 height=67>
+<img src="./assets/oshpark_logo.png" width=128 height=128>
+<img src="./assets/asahitec_logo.jpg" width=153 height=94></p>
               
             </div>
           </div>
@@ -136,5 +225,5 @@
 
 <!--
 MkDocs version : 1.1.2
-Build Date UTC : 2021-05-02 15:24:29.010229+00:00
+Build Date UTC : 2021-05-07 20:11:47.274260+00:00
 -->
