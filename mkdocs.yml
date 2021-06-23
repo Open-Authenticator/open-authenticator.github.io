@@ -2,7 +2,7 @@ site_name: open-authenticator
 site_author: Vedant Paranjape
 site_description: "Documentation for Open Authenticator"
 site_url: https://open-authenticator.github.io
-repo_url: https://github.com/Open-Authenticator
+repo_url: https://github.com/Open-Authenticator/open-authenticator.github.io
 
 theme:
     name: 'readthedocs'
