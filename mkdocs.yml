@@ -9,3 +9,5 @@ theme:
 
 nav:
     - Overview: index.md
+    - Gallery: gallery.md
+    - Upload Software: software-upload.md

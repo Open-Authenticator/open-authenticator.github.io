@@ -41,8 +41,6 @@ The features of open authenticator's [printer circuit board](https://github.com/
 
 * Hackster.io: [TOTP-Based Open Hardware Authenticator Powered by an ESP32 Microcontroller](https://www.hackster.io/news/totp-based-open-hardware-authenticator-powered-by-an-esp32-microcontroller-c770f10008af)
 
-## Gallery
-
 ## Project logs
 
 * Hackaday: [https://hackaday.io/project/176959-open-authenticator](https://hackaday.io/project/176959-open-authenticator)
