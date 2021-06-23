@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="Vedant Paranjape">
+  <link rel="canonical" href="https://open-authenticator.github.io/software-upload/">
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Upload Software - open-authenticator</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Upload Software";
+    var mkdocs_page_input_path = "software-upload.md";
+    var mkdocs_page_url = "/software-upload/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> open-authenticator</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="..">Overview</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../gallery/">Gallery</a>
+                    </li>
+                </ul>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Upload Software</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#requirements">Requirements</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#compile-firmware">Compile firmware</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#flash-firmware">Flash firmware</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#1-connect-usb-uart-to-open-authenticator-uart-port">1) Connect USB-UART to open-authenticator UART port</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2-connect-usb-type-c-to-power-the-board">2) Connect USB Type-C to power the board</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#3-put-board-in-download-mode">3) Put board in download mode</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#4-flash-firmware">4) Flash firmware</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">open-authenticator</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Upload Software</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/Open-Authenticator/edit/master/docs/software-upload.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="software-upload">Software Upload</h1>
+<h2 id="requirements">Requirements</h2>
+<ul>
+<li><em>ESP-IDF</em> <strong>v4.2</strong> (<em>release/v4.2</em>)</li>
+<li>Open-Authenticator board</li>
+<li>USB-UART convertor board (to flash firmware)</li>
+</ul>
+<p>Install instructions are available
+<a href="https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/">here</a>.
+Make sure to install <code>v4.2</code> (step 2 in the given link).</p>
+<h2 id="compile-firmware">Compile firmware</h2>
+<pre><code class="language-bash">git clone --recurse-submodules https://github.com/Open-Authenticator/open-authenticator-app.git
+cd open-authenticator-app
+# activate esp-idf environment (get_idf)
+get_idf
+# build firmare
+idf.py build
+</code></pre>
+<h2 id="flash-firmware">Flash firmware</h2>
+<h3 id="1-connect-usb-uart-to-open-authenticator-uart-port">1) Connect USB-UART to open-authenticator UART port</h3>
+<pre><code>connect as follows
+
+USB-UART----|== RX ==&gt; --- &lt;== TX ==|----Open Authenticator UART port
+            |                       |  
+            |== TX ==&gt; --- &lt;== RX ==|
+</code></pre>
+<p><img alt="" src="../assets/usb-uart.jpg" /></p>
+<p><img alt="" src="../assets/oa-pin-name.jpg" /></p>
+<p><strong>It should look like this after being connected</strong></p>
+<p><img alt="" src="../assets/oa-connected.jpg" /></p>
+<h3 id="2-connect-usb-type-c-to-power-the-board">2) Connect USB Type-C to power the board</h3>
+<ul>
+<li>It is necessary to power the board using usb while flashing firmware. Both the
+usb to uart convertor and open authenticator board must be powered by same power
+source, as we haven't connected ground of the convertor to that of board. </li>
+<li>If one wants to flash without powering it up with usb, connect ground of usb-uart
+convertor to the shield of the usb-c port.</li>
+</ul>
+<h3 id="3-put-board-in-download-mode">3) Put board in download mode</h3>
+<ul>
+<li>While board is powered on, press <code>BOOT/SELECT</code> button, and
+  simultaneously press <code>RESET</code> button. Leave the <code>BOOT/SELECT</code> button after a
+  few seconds.</li>
+</ul>
+<h3 id="4-flash-firmware">4) Flash firmware</h3>
+<pre><code class="language-bash">idf.py flash
+</code></pre>
+<p>After it successfully flashes, press <code>RESET</code> and see it come to power, use the
+buttons to navigate and use it.</p>
+<p><img alt="" src="../assets/success.png" /></p>
+<p><img alt="" src="../assets/working.jpg" /></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../gallery/" class="btn btn-neutral" title="Gallery"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/Open-Authenticator/" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../gallery/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
