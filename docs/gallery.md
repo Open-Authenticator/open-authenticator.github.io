@@ -1,8 +1,11 @@
 # Gallery
 
-## Perfboard board prototype
+## Final Build PCB
 
-![](assets/perfboard_build.jpg)
+![](assets/final_build_1.jpg)
+![](assets/final_build_2.jpg)
+![](assets/final_build_3.jpg)
+![](assets/final_build_4.jpg)
 
 ## Prototype PCB
 
@@ -15,6 +18,7 @@
 ![](assets/prototype_pcb_6.jpg)
 ![](assets/prototype_pcb_7.jpg)
 
-## Final Build PCB
+## Perfboard board prototype
 
+![](assets/perfboard_build.jpg)
 
