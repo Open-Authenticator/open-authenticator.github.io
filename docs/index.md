@@ -9,11 +9,11 @@
 </p>
 
 <p align="center">
+<img alt="Github actions" src="https://github.com/Open-Authenticator/open-authenticator-app/actions/workflows/test-build-app.yaml/badge.svg")
 <img alt="GitHub watchers" src="https://img.shields.io/github/watchers/open-authenticator/open-authenticator-app?style=plastic">
 <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/open-authenticator/open-authenticator-app?style=plastic">
 <img alt="GitHub forks" src="https://img.shields.io/github/forks/open-authenticator/open-authenticator-app?style=plastic">
-<img alt="GitHub issues"
-src="https://img.shields.io/github/issues/open-authenticator/open-authenticator-app?style=plastic">
+<img alt="GitHub issues" src="https://img.shields.io/github/issues/open-authenticator/open-authenticator-app?style=plastic">
 <img alt="GitHub forks" src="https://img.shields.io/github/forks/open-authenticator/open-authenticator-app?style=plastic">
 <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/open-authenticator/open-authenticator-app?style=plastic">
 <img alt="GitHub license" src="https://img.shields.io/github/license/open-authenticator/open-authenticator-app?style=plastic">
